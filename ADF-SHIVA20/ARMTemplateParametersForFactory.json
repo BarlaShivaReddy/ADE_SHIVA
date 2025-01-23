@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADF-SHIVA20"
+		},
+		"LS_ADLS_KV_connectionString": {
+			"value": "DefaultEndpointsProtocol=https;AccountName=stgaccshiva;"
+		},
+		"LS_SQL_PARAM_password": {
+			"value": ""
+		},
+		"LS_adls_connectionString": {
+			"value": ""
+		},
+		"LS_sql_password": {
+			"value": ""
+		},
+		"KV_Batch20_properties_typeProperties_baseUrl": {
+			"value": "https://kv-adebatch.vault.azure.net/"
+		},
+		"LS_SQL_KV_properties_typeProperties_server": {
+			"value": "sqlservershiva.database.windows.net"
+		},
+		"LS_SQL_KV_properties_typeProperties_database": {
+			"value": "sqldbshiva"
+		},
+		"LS_SQL_KV_properties_typeProperties_userName": {
+			"value": "shiva20"
+		},
+		"LS_SQL_PARAM_properties_typeProperties_server": {
+			"value": "sqlservershiva.database.windows.net"
+		},
+		"LS_SQL_PARAM_properties_typeProperties_database": {
+			"value": "@{linkedService().dbName}"
+		},
+		"LS_SQL_PARAM_properties_typeProperties_userName": {
+			"value": "shiva20"
+		},
+		"LS_sql_properties_typeProperties_server": {
+			"value": "sqlservershiva.database.windows.net"
+		},
+		"LS_sql_properties_typeProperties_database": {
+			"value": "sqldbshiva"
+		},
+		"LS_sql_properties_typeProperties_userName": {
+			"value": "shiva20"
+		},
+		"Event_Trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/058929a5-adcf-4521-a4dc-930831b2659b/resourceGroups/RG-SHIVA/providers/Microsoft.Storage/storageAccounts/stgaccshiva"
+		},
+		"Tumbling_properties_pipeline_parameters_WindowStartTime": {
+			"value": "@trigger().outputs.windowStartTime"
+		},
+		"Tumbling_properties_pipeline_parameters_WindowEndTime": {
+			"value": "@trigger().outputs.windowEndTime"
+		}
+	}
+}
