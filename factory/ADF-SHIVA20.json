@@ -1,0 +1,9 @@
+{
+	"name": "ADF-SHIVA20",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "240b9f92-e60d-4b35-a1a6-f19e49943e2e",
+		"tenantId": "ede322d2-30e2-453c-a7d0-e5c6f9275d49"
+	}
+}

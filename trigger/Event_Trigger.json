@@ -1,0 +1,25 @@
+{
+	"name": "Event_Trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Event_Based_Trigger",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/eventtrigger/blobs/input",
+			"blobPathEndsWith": "Cus2.csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/058929a5-adcf-4521-a4dc-930831b2659b/resourceGroups/RG-SHIVA/providers/Microsoft.Storage/storageAccounts/stgaccshiva",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
